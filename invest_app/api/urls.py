@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
-from . import views
-
-# when at root, show index() route endpoint
+from .views import InvestmentsView
+ 
 urlpatterns = [
-    path('', views.index),
+    path('', InvestmentsView.as_view()),
 ]

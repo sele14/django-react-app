@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import Investments
+from .serializers import InvestSerializer
 
-# Create your views here.
-def index(request):
-    """
-    index endpoint
-    """
-    return HttpResponse("Hello, this is the index page.")
-    
+class InvestmentsView(generics.CreateAPIView):
+    # get all objects we created in the Investments class (type, name, price etc.)
+    queryset = Investments.objects.all()
+    serializer_class = InvestSerializer
