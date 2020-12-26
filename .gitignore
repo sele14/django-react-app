@@ -237,6 +237,7 @@ sketch
 .ionide
 
 ### Various
+*.docx
 .doc*
 .docx*
 django_notes.docx
