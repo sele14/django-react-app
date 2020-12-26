@@ -235,3 +235,8 @@ sketch
 # Ignore all local history of files
 .history
 .ionide
+
+### Various
+.doc*
+.docx*
+django_notes.docx
