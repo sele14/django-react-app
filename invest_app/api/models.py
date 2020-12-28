@@ -16,10 +16,7 @@ class Investments(models.Model):
     A model that stores the current investments for each user.
     Contains the asset type (bond, stock, etc.), asset name (e.g. AAPL stock), and asset quantity and price.
     """
-    # asset_type = models.CharField(max_length=20, default="", unique=False)
-    # asset_type = forms.ChoiceField(widget=forms.Select, choices=ASSET_CHOICES)
     asset_type = models.CharField(max_length=100, choices=ASSET_CHOICES, default='Equities')
-
     asset_name = models.CharField(max_length=20, default="", unique=False)
     asset_quantity = models.IntegerField(default=0)
     asset_price = models.FloatField(default=0)

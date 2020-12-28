@@ -241,3 +241,4 @@ sketch
 .doc*
 .docx*
 django_notes.docx
+configs.py
